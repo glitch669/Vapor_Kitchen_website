@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VP signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="../static/css/styles.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div>
+        <header>
+
+            <a href="#" class="logo"><img src="../static/images/logo.jpg" alt=""></a>
+            <ul>
+            <h2>Vapor Kitchen</h2>
+            <h4>       The Secret Is Inside</h4>
+            </ul>
+            <div id="menu-bar" class="fas fa-hamburger"></div>
+        
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="{{url_for('signup')}}">Sign Up</a></li>
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                </ul>
+            </nav>
+        
+        </header>
+    </div>
+    <section>
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post" action = "/signup">
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <div class="form-group">
+                <label >Name</label>
+                <input class="form-control" type="text"  name="name" required="required" placeholder="Name">
+              </div>
+
+              <div class="form-group">
+                <label>SRN</label>
+                <input class="form-control" type="text" background-color="black" name="SRN" required="required" placeholder="SRN">
+              </div>
+
+              <div class="form-group">
+                <p>Gender</p>
+                <input type="radio" id="male" name="gender" value="male" required="required">
+                <label for="male" style="color: aliceblue;">Male  </label>
+                <input type="radio" id="female"  name="gender" value="female" required="required">
+                <label for="female" style="color: aliceblue;">Female  </label>
+              </div>
+              
+              <div class="form-group">
+                <label >Phone number</label>
+                <input class="form-control" type="tel"  name="phone"  required="required" placeholder="Phone Number">
+              </div>
+
+              <div class="form-group">
+                <label >College Email-id</label>
+                <input class="form-control" type="text"  name="email" required="required" placeholder="Email-id">
+              </div>
+
+              <div class="form-group">
+                <label >Password</label>
+                <input class="form-control" type="password"  name="password" required="required" placeholder="Password">
+              </div>
+                <div class="form-group">
+                <input type="submit" name="submit" value="Sign up" class="btn btn-primary btn-block" style="background-color:#2539ec;color:rgb(77, 197, 241);">
+                </div>
+               <a href="{{url_for('login')}}" class="already">You already have an account? Login here.</a>
+            </form>
+        </div>
+    </div>
+  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+</body>
+
+</html>
